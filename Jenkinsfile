@@ -22,7 +22,7 @@ pipeline{
                 sshagent(credentials: ['ssh']) {
                     sh '''
                     ssh ubuntu@3.90.15.163 '
-                    cd /path/to/your/application &&
+                    cd /home/ubuntu/my-node-project &&
                     git pull origin main &&
                     npm install &&
                     pm2 restart app.js'
